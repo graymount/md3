@@ -1,0 +1,14 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "16"
+  NODE_ENV = "production"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
